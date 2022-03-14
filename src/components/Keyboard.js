@@ -5,13 +5,9 @@ export default class Keyboard extends Component {
         super(props);
         this.state = {
 
-        }
-
-        
+        }  
     }
 
-
-    
     render() {
         const topKeyboardRow = ["Q","W","E","R","T","Y","U","I","O","P"]
         const middleKeyboardRow = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
@@ -22,7 +18,7 @@ export default class Keyboard extends Component {
         const keyboard3 = bottomKeyboardRow.map((value) => <div id={value} key={value} className="letterButton" onClick={ e => this.props.addLetter(e.target.id)}>{value}</div>)
 
         return (
-            <div>
+            <div id="keyboard">
                 <div id="topKeyboardRow" className="keyboardRow">
                     {keyboard1}
                 </div>
